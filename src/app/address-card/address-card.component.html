@@ -1,0 +1,12 @@
+<div>
+<h1>{{user.name}}</h1>
+<h3>{{user.designation}}</h3>
+<button (click)="toggleCollapse()">expand/collapse</button>
+<div *ngIf="!isCollapsed">
+<p>{{user.address}}</p>
+<div *ngIf="user.phone.length">
+<p>phone:</p>
+<p *ngFor="let phoneNumber of user.phone">{{phoneNumber}}</p>
+</div>
+</div>
+</div>
